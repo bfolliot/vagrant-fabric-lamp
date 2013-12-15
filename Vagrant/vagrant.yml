@@ -1,16 +1,16 @@
-myvm:
-  hostname : 'myvm.dev'
+mylampvm:
+  hostname : 'mylampvm.dev'
   # host_aliases : 'www.myvm.dev'
   ip : 192.168.80.20
   box : 'Ubuntu-raring64-vanilla'
   url: 'http://goo.gl/ceHWg'
   ram : 2048
-  # share_folders:
-  #   projects:
-  #     host_path: '../Shares/htdocs'
-  #     guest_path: '/srv/htdocs'
-  # fabric :
-  #   path : '../Fabric/fabfile.py'
-  #   tasks :
-  #     - upgrade
-  #     - install
+  share_folders:
+    projects:
+      host_path: '../Shares/htdocs'
+      guest_path: '/srv/htdocs'
+  fabric :
+    path : '../Fabric/fabfile.py'
+    tasks :
+      - upgrade
+      - install

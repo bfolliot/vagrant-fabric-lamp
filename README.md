@@ -1,9 +1,7 @@
-# vagrant-fabric-bootstrap
+# vagrant-fabric-lamp
 
-Is my bootstrap to integrate Vagrant and Fabric in my development projects.
+Is a basic Vagrant Fabric Lamp configuration based on my Vagrant Fabric Bootstrap
 
 ## Prerequisites
 
 ## Quickstart
-
-## Examples of Use
