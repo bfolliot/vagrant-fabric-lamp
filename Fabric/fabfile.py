@@ -7,6 +7,9 @@ from fabtools.require.service import stopped, restarted
 from fabtools.require.files import template_file, directory
 from os.path import dirname, realpath
 
+
+full_path = dirname(dirname(realpath(__file__))) + '/Fabric'
+
 @task
 def upgrade():
      sudo('apt-get update')
