@@ -2,13 +2,13 @@ mylampvm:
   hostname : 'mylampvm.dev'
   # host_aliases : 'www.myvm.dev'
   ip : 192.168.80.20
-  box : 'Ubuntu-raring64-vanilla'
-  url: 'http://goo.gl/ceHWg'
+  box : 'ubuntu-13.10-vanilla'
+  url: 'http://box.bryanfolliot.fr/ubuntu-13.10-vanilla.box'
   ram : 2048
   share_folders:
-    projects:
-      host_path: '../Shares/htdocs'
-      guest_path: '/srv/htdocs'
+    srv:
+      host_path: '../srv'
+      guest_path: '/srv'
   fabric :
     path : '../Fabric/fabfile.py'
     tasks :

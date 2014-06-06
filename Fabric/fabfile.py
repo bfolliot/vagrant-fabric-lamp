@@ -27,26 +27,13 @@ def install():
 
     apache()
     stopped('apache2')
-    full_path = dirname(realpath(__file__))
-    # template_file(
-    #     template_source = full_path + '/templates/apache2/vhost.tpl',
-    #     path='/etc/apache2/sites-available/mylampvm.dev',
-    #     context = {
-    #         'server_name': 'mylampvm.dev',
-    #         'document_root': '/srv/htdocs',
-    #         'port' : 80
-    #     },
-    #     owner = 'root',
-    #     group = 'root',
-    #     use_sudo=True
-    # )
     site_disabled('default')
     site(
         'mylampvm.dev',
         template_source=full_path + '/templates/apache2/vhost.tpl',
         port=80,
         server_name='mylampvm.dev',
-        document_root='/srv/htdocs',
+        document_root='/srv',
     )
 
     template_file(
